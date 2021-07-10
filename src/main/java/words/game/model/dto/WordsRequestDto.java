@@ -5,6 +5,6 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class WordsDto {
+public class WordsRequestDto {
     private String[] words;
 }

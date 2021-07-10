@@ -5,7 +5,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import words.game.model.dto.WordsDto;
+import words.game.model.dto.WordsRequestDto;
+import words.game.model.dto.WordsResponseDto;
 import words.game.service.WordsService;
 
 @RestController
@@ -15,9 +16,10 @@ public class WordsController {
     private final WordsService wordsService;
 
     @PostMapping
-    public WordsDto getWords(@RequestBody WordsDto wordsDto) {
-        String[] correctlyWords = wordsService.getWordsSequence(wordsDto.getWords());
-        wordsDto.setWords(correctlyWords);
-        return wordsDto;
+    public WordsResponseDto getWords(@RequestBody WordsRequestDto wordsRequestDto) {
+        String[] correctlyWords = wordsService.getWordsSequence(wordsRequestDto.getWords());
+        WordsResponseDto wordsResponseDto = new WordsResponseDto();
+        wordsResponseDto.setWords(correctlyWords);
+        return wordsResponseDto;
     }
 }
