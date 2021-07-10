@@ -125,7 +125,7 @@ maven, and if the tests are not passed the build is supposed to fail.
 ## Setup Basic
 - Make a fork of this repository to yourself and copy the link to the project.
 - Create new project from version control in intellij IDEA and paste the link you copied earlier.
-- Build the application using the intellij IDEA 'maven package' command in the terminal.
+- Build the application using the intellij IDEA 'mvn package' command in the terminal.
 This should run unit tests and pack the project into the 'war' archive.
 
 ![maven package](https://i2.paste.pics/D5HRO.png)
