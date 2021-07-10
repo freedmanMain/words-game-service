@@ -1,6 +1,7 @@
 # Test assignment for java developer position
 
 ## Navigate
+- [Goal](#goal-of-this-project)
 - [Conditions](#conditions)
 - [Technologies](#technologies)
 - [Examples](#examples)
