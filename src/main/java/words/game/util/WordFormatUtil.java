@@ -1,6 +1,6 @@
 package words.game.util;
 
-public class ValidateUtil {
+public class WordFormatUtil {
     private static final String WORD_FORMAT = "[a-zA-Z]+-?[a-zA-Z]+";
 
     public static boolean matchesWords(String previousWord, String nextWord) {

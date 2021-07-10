@@ -13,21 +13,21 @@ public class WordsServiceTest {
     }
 
     @Test
-    public void sendVArrayWithAllRightWords_Ok() {
+    public void sendVArrayWithAllCorrectlyWords_Ok() {
         String[] expected = {"fish", "horse", "east", "temp"};
         String[] actual = wordsService.getWordsSequence(new String[]{"fish", "horse", "east", "temp"});
         Assert.assertArrayEquals(expected, actual);
     }
 
     @Test
-    public void sendArrayWithOneRightWord_Ok() {
+    public void sendArrayWithOneCorrectWord_Ok() {
         String[] expected = {"fish"};
         String[] actual = wordsService.getWordsSequence(new String[]{"fish", "create", "each", "hello"});
         Assert.assertArrayEquals(expected, actual);
     }
 
     @Test
-    public void sendArrayWithTwoRightWords_Ok() {
+    public void sendArrayWithTwoCorrectlyWords_Ok() {
         String[] expected = {"fish", "horse"};
         String[] actual = wordsService.getWordsSequence(new String[]{"fish", "horse", "stand-up", "hello"});
         Assert.assertArrayEquals(expected, actual);
@@ -51,6 +51,13 @@ public class WordsServiceTest {
     public void sendArrayWithEmptyFirstElement_Ok() {
         String[] expected = {};
         String[] actual = wordsService.getWordsSequence(new String[]{"", "empty"});
+        Assert.assertArrayEquals(expected, actual);
+    }
+
+    @Test
+    public void sendArrayWithoutWords_Ok() {
+        String[] expected = {};
+        String[] actual = wordsService.getWordsSequence(new String[]{"@", "1234", "ZX2scs@!"});
         Assert.assertArrayEquals(expected, actual);
     }
 }

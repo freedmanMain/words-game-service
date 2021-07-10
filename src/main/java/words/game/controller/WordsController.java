@@ -16,8 +16,8 @@ public class WordsController {
 
     @PostMapping
     public WordsDto getWords(@RequestBody WordsDto wordsDto) {
-        String[] rightWords = wordsService.getWordsSequence(wordsDto.getWords());
-        wordsDto.setWords(rightWords);
+        String[] correctlyWords = wordsService.getWordsSequence(wordsDto.getWords());
+        wordsDto.setWords(correctlyWords);
         return wordsDto;
     }
 }
