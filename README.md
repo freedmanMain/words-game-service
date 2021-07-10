@@ -2,6 +2,7 @@
 
 ## Navigate
 - [Conditions](#conditions)
+- [Technologies](#technologies)
 - [Examples](#examples)
 - [Setup Basic](#setup-basic)
 - [Setup Web](#setup-web)
@@ -24,6 +25,11 @@ of the service The test must contain the checking of all the cases specified in 
 maven, and if the tests are not passed the build is supposed to fail.
   - The project must be hosted on a public git repository.
   
+## Technologies
+- Apache Tomcat - version 9.0.46
+- Spring Core/Web/MVC/Rest
+- Json
+ 
 ## Examples
 
 ### Example 1
